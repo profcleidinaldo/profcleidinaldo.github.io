@@ -96,7 +96,7 @@
 
     h1.hero-title {
       font-family: var(--f-serif);
-      font-size: clamp(2.8rem, 4.5vw, 4.5rem);
+      font-size: clamp(3rem, 5vw, 5rem);
       font-weight: 700; line-height: 1.12;
       letter-spacing: -.01em; margin-bottom: 1.4rem; color: var(--text);
     }
@@ -106,8 +106,9 @@
       background: linear-gradient(135deg, var(--purple-lt), #C084FC);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
       background-clip: text;
-      display: inline;
-      padding: .1em 0;
+      display: inline-block;
+      padding: .05em .05em .2em;
+      line-height: 1.2;
     }
     .hero-sub { font-size: 1.05rem; font-weight: 300; color: var(--text-sec); line-height: 1.85; margin-bottom: 2.4rem; max-width: 420px; }
     .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
@@ -175,11 +176,11 @@
     /* ── PROGRAMS ── */
     .progs-wrap { border-bottom: 1px solid var(--rule); }
     .progs { max-width: 1280px; margin: 0 auto; padding: 3.5rem 3rem; }
-    .s-eye { display: flex; align-items: center; gap: 1rem; font-size: .72rem; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--purple-lt); margin-bottom: 1rem; }
+    .s-eye { display: flex; align-items: center; gap: 1rem; font-size: .72rem; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--purple-lt); margin-bottom: 1.4rem; }
     .s-eye::after { content: ''; flex: 1; height: 1px; background: var(--rule-md); }
     .s-title {
       font-family: var(--f-serif);
-      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      font-size: clamp(2.4rem, 4.5vw, 3.5rem);
       font-weight: 700; line-height: 1.15;
       margin-bottom: 2.5rem; color: var(--text);
     }
@@ -187,7 +188,10 @@
       font-style: italic;
       background: linear-gradient(135deg, var(--purple-lt), #C084FC);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      background-clip: text; display: inline; padding: .1em 0;
+      background-clip: text;
+      display: inline-block;
+      padding: .05em .05em .2em;
+      line-height: 1.2;
     }
 
     /* ── ACCORDION ── */
@@ -197,7 +201,7 @@
     .pi-trig { display: grid; grid-template-columns: 52px 1fr auto; align-items: center; gap: 1.5rem; padding: 1.6rem 2rem; cursor: pointer; background: var(--bg-card); transition: background .25s; user-select: none; }
     .pi-trig:hover { background: #18181B; }
     .pi.open > .pi-trig { background: #18181B; border-bottom: 1px solid var(--rule); }
-    .pi-num { font-family: var(--f-serif); font-size: 1.8rem; font-weight: 700; color: var(--rule-md); line-height: 1; transition: color .3s; }
+    .pi-num { font-family: var(--f-serif); font-size: 1.8rem; font-weight: 700; color: var(--rule-md); opacity: .7; line-height: 1; transition: color .3s; }
     .pi.open > .pi-trig .pi-num, .pi-trig:hover .pi-num { color: var(--purple-lt); }
     .pi-meta { min-width: 0; }
     .pi-badges { display: flex; align-items: center; gap: .5rem; margin-bottom: .35rem; flex-wrap: wrap; }
