@@ -218,14 +218,15 @@
 
     /* ── INNER HERO ── */
     .p-hero { display: grid; grid-template-columns: 1fr 280px; border-top: 1px solid var(--rule); }
-    .p-hl { padding: 2.5rem 2.5rem; border-right: 1px solid var(--rule); background: var(--bg); }
+    .p-hl { padding: 2rem 2.5rem; border-right: 1px solid var(--rule); background: var(--bg); }
     .p-desc { font-size: .93rem; font-weight: 300; color: var(--text-sec); line-height: 1.85; max-width: 500px; margin-bottom: 2rem; }
     .p-stats { display: flex; gap: 2.5rem; margin-bottom: 2rem; }
     .ps-n { font-family: var(--f-serif); font-size: 1.8rem; font-weight: 700; color: var(--text); line-height: 1; }
     .ps-n em { color: var(--purple-lt); font-style: normal; font-size: 1.1rem; }
     .ps-l { font-size: .6rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--text-dim); margin-top: .2rem; }
     .p-acts { display: flex; gap: 1rem; flex-wrap: wrap; }
-    .p-hr { padding: 2rem 1.8rem; background: var(--bg-card); border-left: 2px solid var(--purple); }
+    .p-acts .btn-primary, .p-acts .btn-outline { width: auto; align-self: flex-start; }
+    .p-hr { padding: 2rem 2rem; background: var(--bg-card); border-left: 2px solid var(--purple); }
     .p-info-h { font-size: .58rem; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--purple-lt); margin-bottom: 1.2rem; }
     .p-info-row { display: flex; gap: .8rem; align-items: flex-start; padding: .8rem 0; border-bottom: 1px solid var(--rule); }
     .p-info-row:last-child { border-bottom: none; }
@@ -405,7 +406,7 @@
       <div class="hc-rows">
         <div class="hc-row"><div class="hc-ico">📅</div><div><div class="hc-lbl">Início</div><div class="hc-val">2ª Turma · A confirmar</div></div></div>
         <div class="hc-row"><div class="hc-ico">🏛️</div><div><div class="hc-lbl">Chancela</div><div class="hc-val">Universidade Federal de Goiás — UFG</div></div></div>
-        <div class="hc-row"><div class="hc-ico">🕐</div><div><div class="hc-lbl">Duração</div><div class="hc-val">360h · 12 meses · Online ao vivo</div></div></div>
+        <div class="hc-row"><div class="hc-ico">🕐</div><div><div class="hc-lbl">Duração</div><div class="hc-val">360h · 18 meses · Online ao vivo</div></div></div>
         <div class="hc-row"><div class="hc-ico">👤</div><div><div class="hc-lbl">Público</div><div class="hc-val">Gestores e interessados em IA e Dados</div></div></div>
       </div>
       <a href="SEU_LINK_DE_INSCRICAO_AQUI" target="_blank" class="hc-btn">Inscreva-se agora →</a>
@@ -441,7 +442,7 @@
           <div class="pi-name">IA e Ciência de Dados para a <em>Gestão Pública</em></div>
         </div>
         <div class="pi-right">
-          <div class="chips"><span class="chip">12 meses</span><span class="chip">Online ao vivo</span><span class="chip">Setor Público</span></div>
+          <div class="chips"><span class="chip">18 meses</span><span class="chip">Online ao vivo</span><span class="chip">Setor Público</span></div>
           <div class="pi-ico">+</div>
         </div>
       </div>
@@ -460,7 +461,7 @@
             <div class="p-info-h">Informações rápidas</div>
             <div class="p-info-row"><div class="p-ico">📅</div><div><div class="p-k">Início</div><div class="p-v">2ª Turma · A confirmar</div></div></div>
             <div class="p-info-row"><div class="p-ico">🖥️</div><div><div class="p-k">Formato</div><div class="p-v">Online ao vivo com gravações</div></div></div>
-            <div class="p-info-row"><div class="p-ico">🎓</div><div><div class="p-k">Certificação</div><div class="p-v">Especialização — UFG</div></div></div>
+            <div class="p-info-row"><div class="p-ico">🎓</div><div><div class="p-k">Certificação</div><div class="p-v">Especialização lato sensu — UFG</div></div></div>
             <div class="p-info-row"><div class="p-ico">👤</div><div><div class="p-k">Público-alvo</div><div class="p-v">Gestores e interessados em IA e Dados</div></div></div>
           </div>
         </div>
@@ -484,9 +485,9 @@
           <div class="p-diffs">
             <div class="p-diff"><div class="p-dn">01</div><div class="p-dt">Pioneirismo no Brasil</div><div class="p-dd">Primeiro curso a unir IA, dados e gestão pública com chancela federal.</div></div>
             <div class="p-diff"><div class="p-dn">02</div><div class="p-dt">Professores Pesquisadores</div><div class="p-dd">Corpo docente com produção científica e experiência no setor público.</div></div>
-            <div class="p-diff"><div class="p-dn">03</div><div class="p-dt">100% Online ao Vivo</div><div class="p-dd">Flexibilidade para servidores de qualquer estado, com gravações disponíveis.</div></div>
+            <div class="p-diff"><div class="p-dn">03</div><div class="p-dt">Online ao Vivo + Gravações no AVA</div><div class="p-dd">Assista ao vivo ou acesse as gravações quando quiser no Ambiente Virtual de Aprendizagem.</div></div>
             <div class="p-diff"><div class="p-dn">04</div><div class="p-dt">Aplicação Imediata</div><div class="p-dd">Projetos práticos desenvolvidos para o contexto real do aluno.</div></div>
-            <div class="p-diff"><div class="p-dn">05</div><div class="p-dt">Rede Nacional</div><div class="p-dd">Conexão com servidores e gestores de todo o Brasil.</div></div>
+            <div class="p-diff"><div class="p-dn">05</div><div class="p-dt">Rede Nacional</div><div class="p-dd">Conexão com profissionais e gestores de todo o Brasil.</div></div>
             <div class="p-diff"><div class="p-dn">06</div><div class="p-dt">Certificado UFG</div><div class="p-dd">Especialização lato sensu com validade e reconhecimento nacionais.</div></div>
           </div>
         </div>
@@ -537,7 +538,7 @@
             <div class="p-info-h">Informações rápidas</div>
             <div class="p-info-row"><div class="p-ico">📅</div><div><div class="p-k">Início</div><div class="p-v">Em breve · A confirmar</div></div></div>
             <div class="p-info-row"><div class="p-ico">🖥️</div><div><div class="p-k">Formato</div><div class="p-v">Online ao vivo com gravações</div></div></div>
-            <div class="p-info-row"><div class="p-ico">🎓</div><div><div class="p-k">Certificação</div><div class="p-v">Especialização</div></div></div>
+            <div class="p-info-row"><div class="p-ico">🎓</div><div><div class="p-k">Certificação</div><div class="p-v">Especialização lato sensu</div></div></div>
             <div class="p-info-row"><div class="p-ico">👤</div><div><div class="p-k">Público-alvo</div><div class="p-v">Executivos, analistas e empreendedores</div></div></div>
           </div>
         </div>
@@ -631,7 +632,7 @@
           <h3 class="p-sh">Por que este MBA?</h3>
           <div class="p-diffs">
             <div class="p-diff"><div class="p-dn">01</div><div class="p-dt">Visão Executiva</div><div class="p-dd">Foco em liderança, estratégia e gestão da transformação digital.</div></div>
-            <div class="p-diff"><div class="p-dn">02</div><div class="p-dt">Maior Profundidade</div><div class="p-dd">360h — o curso mais completo do portfólio.</div></div>
+            <div class="p-diff"><div class="p-dn">02</div><div class="p-dt">Maior Profundidade</div><div class="p-dd">480h — o curso mais completo do portfólio.</div></div>
             <div class="p-diff"><div class="p-dn">03</div><div class="p-dt">Professores de Elite</div><div class="p-dd">Doutores com experiência em pesquisa e no mercado corporativo.</div></div>
             <div class="p-diff"><div class="p-dn">04</div><div class="p-dt">100% Online ao Vivo</div><div class="p-dd">Para executivos que não podem parar a carreira.</div></div>
             <div class="p-diff"><div class="p-dn">05</div><div class="p-dt">Cases Reais</div><div class="p-dd">Projetos com cases das empresas dos próprios alunos.</div></div>
@@ -641,7 +642,7 @@
         <div class="p-sec">
           <div class="p-lbl">Grade curricular</div>
           <h3 class="p-sh">O que você vai aprender</h3>
-          <p class="p-sd">360 horas unindo gestão, estratégia, dados e IA para formar líderes do futuro.</p>
+          <p class="p-sd">480 horas unindo gestão, estratégia, dados e IA para formar líderes do futuro.</p>
           <div class="p-grade">
             <div class="p-gi"><span class="p-gn">01</span><span class="p-gname">IA e Estratégia Empresarial</span></div>
             <div class="p-gi"><span class="p-gn">02</span><span class="p-gname">Liderança e Gestão de Times de Dados</span></div>
@@ -669,7 +670,7 @@
           <div class="pi-name">Certificação <em>AI for Business</em></div>
         </div>
         <div class="pi-right">
-          <div class="chips"><span class="chip">8 semanas</span><span class="chip">Online ao vivo</span><span class="chip">Intensivo</span></div>
+          <div class="chips"><span class="chip">3 meses</span><span class="chip">Online ao vivo</span><span class="chip">Intensivo</span></div>
           <div class="pi-ico">+</div>
         </div>
       </div>
@@ -694,9 +695,9 @@
         <div class="p-sec">
           <div class="p-lbl">Sobre a certificação</div>
           <div class="p-2col">
-            <div class="p-txt"><p>Para quem quer entrar no mundo da IA com agilidade. Em 8 semanas, entrega o essencial para profissionais de qualquer área atuarem com confiança em um ambiente orientado por inteligência artificial.</p><p>Sem necessidade de programação. Foco total em aplicação, ferramentas e estratégia.</p></div>
+            <div class="p-txt"><p>Para quem quer entrar no mundo da IA com agilidade. Em 3 meses, entrega o essencial para profissionais de qualquer área atuarem com confiança em um ambiente orientado por inteligência artificial.</p><p>Sem necessidade de programação. Foco total em aplicação, ferramentas e estratégia.</p></div>
             <div class="p-feats">
-              <div class="p-feat"><div class="p-feat-i">⚡</div><div><div class="p-feat-t">Rápido e Intensivo</div><div class="p-feat-d">8 semanas para dominar o essencial de IA nos negócios.</div></div></div>
+              <div class="p-feat"><div class="p-feat-i">⚡</div><div><div class="p-feat-t">Rápido e Intensivo</div><div class="p-feat-d">3 meses para dominar o essencial de IA nos negócios.</div></div></div>
               <div class="p-feat"><div class="p-feat-i">🛠️</div><div><div class="p-feat-t">Ferramentas Reais</div><div class="p-feat-d">Aplicação com as principais ferramentas de IA do mercado.</div></div></div>
               <div class="p-feat"><div class="p-feat-i">🎯</div><div><div class="p-feat-t">Zero Programação</div><div class="p-feat-d">Foco em estratégia e uso inteligente, não em código.</div></div></div>
             </div>
@@ -777,7 +778,7 @@
     </div>
   <div class="ft-copy">© 2025 · Todos os direitos reservados</div>
   <div class="ft-links">
-    <a href="https://www.instagram.com/professorcleidinaldo/">Instagram</a>
+    <a href="https://instagram.com" target="_blank">Instagram</a>
     <a href="https://linkedin.com" target="_blank">LinkedIn</a>
   </div>
 </div>
