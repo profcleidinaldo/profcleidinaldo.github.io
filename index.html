@@ -73,31 +73,31 @@
     .hero { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1fr 420px; align-items: center; gap: 5rem; padding: 9rem 3rem 6rem; position: relative; z-index: 1; }
     .hero-eyebrow { display: inline-flex; align-items: center; gap: .7rem; font-size: .68rem; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--purple-lt); margin-bottom: 1.6rem; }
     .hero-eyebrow::before { content: ''; width: 28px; height: 1px; background: linear-gradient(90deg, var(--purple), var(--purple-lt)); }
-    h1.hero-title { font-family: var(--f-serif); font-size: clamp(3rem, 5.5vw, 5rem); font-weight: 700; line-height: 1.05; letter-spacing: -.01em; margin-bottom: 1.6rem; color: var(--text); }
-    h1.hero-title em { font-style: italic; background: linear-gradient(135deg, var(--purple-lt), #C084FC); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    h1.hero-title { font-family: var(--f-serif); font-size: clamp(3rem, 5.5vw, 5rem); font-weight: 700; line-height: 1.1; letter-spacing: -.01em; margin-bottom: 1.6rem; color: var(--text); overflow: visible; }
+    h1.hero-title em { font-style: italic; background: linear-gradient(135deg, var(--purple-lt), #C084FC); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: inline-block; overflow: visible; padding-bottom: .05em; }
     .hero-sub { font-size: .98rem; font-weight: 300; color: var(--text-sec); line-height: 1.85; margin-bottom: 2.8rem; max-width: 430px; }
     .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
 
     /* BUTTONS */
     .btn-primary {
-      background: var(--purple);
+      background: linear-gradient(135deg, var(--purple-dk), var(--purple) 50%, #9333EA);
       color: #fff;
       font-family: var(--f-sans); font-weight: 600; font-size: .75rem;
       letter-spacing: .12em; text-transform: uppercase;
       padding: .95rem 2.2rem; border-radius: 6px;
       text-decoration: none; border: none; cursor: pointer;
-      transition: background .2s, transform .2s, box-shadow .2s;
+      transition: opacity .2s, transform .2s, box-shadow .2s;
       display: inline-flex; align-items: center; gap: .5rem;
       box-shadow: 0 0 28px rgba(124,58,237,.3);
     }
-    .btn-primary:hover { background: var(--purple-lt); transform: translateY(-1px); box-shadow: 0 0 40px rgba(168,85,247,.4); }
+    .btn-primary:hover { opacity: .88; transform: translateY(-1px); box-shadow: 0 0 40px rgba(168,85,247,.4); }
 
     .btn-outline {
       background: transparent; color: var(--text-sec);
       font-family: var(--f-sans); font-weight: 500; font-size: .75rem;
       letter-spacing: .12em; text-transform: uppercase;
       padding: .95rem 2rem; border-radius: 6px;
-      text-decoration: none; border: 1px solid var(--rule-md); cursor: pointer;
+      text-decoration: none; border: 1px solid rgba(168,85,247,.35); cursor: pointer;
       transition: border-color .2s, color .2s, transform .2s;
       display: inline-flex; align-items: center;
     }
@@ -125,24 +125,24 @@
     .hc-ico { width: 28px; height: 28px; min-width: 28px; background: var(--purple-bg); border: 1px solid var(--purple-bd); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: .75rem; }
     .hc-lbl { font-size: .6rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--text-dim); }
     .hc-val { font-size: .83rem; font-weight: 300; color: var(--text); margin-top: .1rem; line-height: 1.4; }
-    .hc-btn { display: block; text-align: center; background: var(--purple); color: #fff; font-family: var(--f-sans); font-weight: 600; font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; padding: .95rem; border-radius: 6px; text-decoration: none; transition: background .2s, box-shadow .2s; box-shadow: 0 0 20px rgba(124,58,237,.3); }
-    .hc-btn:hover { background: var(--purple-lt); box-shadow: 0 0 32px rgba(168,85,247,.4); }
+    .hc-btn { display: block; text-align: center; background: linear-gradient(135deg, var(--purple-dk), var(--purple) 50%, #9333EA); color: #fff; font-family: var(--f-sans); font-weight: 600; font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; padding: .95rem; border-radius: 6px; text-decoration: none; transition: opacity .2s, box-shadow .2s; box-shadow: 0 0 20px rgba(124,58,237,.3); }
+    .hc-btn:hover { opacity: .88; box-shadow: 0 0 32px rgba(168,85,247,.4); }
 
     /* STATS */
     .stats-wrap { border-bottom: 1px solid var(--rule); background: var(--bg-mid); }
     .stats { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(4,1fr); border-left: 1px solid var(--rule); }
-    .stat-c { padding: 2.5rem 2rem; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+    .stat-c { padding: 2.2rem 2rem; border-right: 1px solid var(--rule); }
     .stat-n { font-family: var(--f-serif); font-size: 3rem; font-weight: 700; color: var(--text); line-height: 1; margin-bottom: .3rem; }
     .stat-n sup { font-size: 1.5rem; color: var(--purple-lt); }
     .stat-d { font-size: .72rem; color: var(--text-sec); font-weight: 400; letter-spacing: .05em; }
 
     /* PROGRAMS */
     .progs-wrap { border-bottom: 1px solid var(--rule); }
-    .progs { max-width: 1280px; margin: 0 auto; padding: 6rem 3rem; }
+    .progs { max-width: 1280px; margin: 0 auto; padding: 5rem 3rem; }
     .s-eye { display: flex; align-items: center; gap: 1rem; font-size: .67rem; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--purple-lt); margin-bottom: 1.2rem; }
-    .s-eye::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
-    .s-title { font-family: var(--f-serif); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 700; line-height: 1.1; margin-bottom: 3.5rem; color: var(--text); }
-    .s-title em { font-style: italic; background: linear-gradient(135deg, var(--purple-lt), #C084FC); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .s-eye::after { content: ''; flex: 1; height: 1px; background: var(--rule-md); }
+    .s-title { font-family: var(--f-serif); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 700; line-height: 1.1; margin-bottom: 3rem; color: var(--text); overflow: visible; }
+    .s-title em { font-style: italic; background: linear-gradient(135deg, var(--purple-lt), #C084FC); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: inline-block; overflow: visible; padding-bottom: .05em; }
 
     /* ACCORDION */
     .acc { border: 1px solid var(--rule); border-radius: 12px; overflow: hidden; }
@@ -161,7 +161,8 @@
     .badge { display: inline-flex; align-items: center; gap: .35rem; font-size: .58rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; padding: .22rem .7rem; border-radius: 4px; }
     .b-open { background: var(--purple-bg); color: var(--purple-lt); border: 1px solid var(--purple-bd); }
     .b-open::before { content: ''; width: 5px; height: 5px; background: var(--purple-lt); border-radius: 50%; animation: blink 2s infinite; }
-    .b-soon { background: rgba(255,255,255,.04); color: var(--text-dim); border: 1px solid var(--rule); }
+    /* CORRIGIDO: badge Em breve com tom roxo */
+    .b-soon { background: rgba(124,58,237,0.06); color: var(--purple-lt); border: 1px solid rgba(124,58,237,0.2); opacity: .75; }
     .b-type { font-size: .6rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--text-sec); }
 
     .pi-name { font-family: var(--f-serif); font-size: clamp(1.1rem, 2.2vw, 1.4rem); font-weight: 600; line-height: 1.2; color: var(--text); }
@@ -170,8 +171,8 @@
     .pi-right { display: flex; align-items: center; gap: 1.5rem; flex-shrink: 0; }
     .chips { display: flex; gap: .5rem; }
     .chip { font-size: .62rem; color: var(--text-dim); background: transparent; border: 1px solid var(--rule); padding: .2rem .75rem; border-radius: 100px; }
-    .pi-ico { width: 36px; height: 36px; min-width: 36px; border: 1px solid var(--rule-md); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1rem; color: var(--text-dim); transition: border-color .2s, color .2s, transform .35s, background .2s; }
-    .pi.open > .pi-trig .pi-ico { border-color: var(--purple); color: var(--purple-lt); background: var(--purple-bg); transform: rotate(45deg); }
+    .pi-ico { width: 36px; height: 36px; min-width: 36px; border: 1px solid var(--purple-bd); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1rem; color: var(--purple-lt); background: var(--purple-bg); transition: border-color .2s, color .2s, transform .35s, background .2s; }
+    .pi.open > .pi-trig .pi-ico { border-color: var(--purple-lt); color: var(--purple-lt); background: rgba(124,58,237,.15); transform: rotate(45deg); }
 
     .pi-panel { max-height: 0; overflow: hidden; transition: max-height .65s cubic-bezier(.16,1,.3,1); }
     .pi.open > .pi-panel { max-height: 5000px; }
@@ -224,36 +225,54 @@
     .p-gn { font-family: var(--f-serif); font-size: .75rem; font-weight: 700; color: var(--purple-lt); min-width: 20px; }
     .p-gname { font-size: .78rem; font-weight: 300; color: var(--text); line-height: 1.3; }
 
-    /* ABOUT */
+    /* ABOUT — CORRIGIDO */
     .about-wrap { border-bottom: 1px solid var(--rule); background: var(--bg-mid); }
-    .about { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; }
+    .about { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 360px 1fr; }
     .about-l { padding: 5rem 3rem; border-right: 1px solid var(--rule); }
     .about-r { padding: 5rem 3rem; }
-    .a-photo { aspect-ratio: 4/5; background: var(--bg-card); border: 1px solid var(--rule-md); border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .8rem; color: var(--text-sec); font-size: .78rem; text-align: center; padding: 2rem; margin-bottom: 2rem; }
+
+    /* Foto: sem código visível, placeholder limpo */
+    .a-photo {
+      aspect-ratio: 3/4;
+      background: var(--bg-card); border: 1px solid var(--rule-md);
+      border-radius: 8px; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: .8rem;
+      color: var(--text-sec); font-size: .78rem; text-align: center;
+      padding: 2rem; margin-bottom: 1.8rem; overflow: hidden;
+    }
     .a-photo svg { width: 38px; height: 38px; stroke: var(--purple-lt); fill: none; stroke-width: 1.5; opacity: .5; }
+    .a-photo-hint { font-size: .72rem; color: var(--text-dim); line-height: 1.6; }
     .a-creds { display: flex; flex-direction: column; border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; }
     .a-cred { display: flex; gap: 1rem; align-items: center; padding: .85rem 1.2rem; border-bottom: 1px solid var(--rule); font-size: .8rem; }
     .a-cred:last-child { border-bottom: none; }
     .a-cdot { width: 5px; height: 5px; background: var(--purple-lt); border-radius: 50%; flex-shrink: 0; }
     .a-ctxt { font-weight: 300; color: var(--text-sec); }
     .a-cinst { font-weight: 600; color: var(--purple-lt); margin-left: auto; font-size: .7rem; letter-spacing: .06em; }
-    .a-title { font-family: var(--f-serif); font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 700; line-height: 1.1; margin-bottom: 1.5rem; color: var(--text); }
-    .a-title em { font-style: italic; background: linear-gradient(135deg, var(--purple-lt), #C084FC); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+    /* Sobre texto: palavras-chave em roxo */
+    .a-title { font-family: var(--f-serif); font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 700; line-height: 1.1; margin-bottom: 1.5rem; color: var(--text); overflow: visible; }
+    .a-title em { font-style: italic; background: linear-gradient(135deg, var(--purple-lt), #C084FC); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: inline-block; overflow: visible; padding-bottom: .05em; }
     .a-txt { font-size: .91rem; font-weight: 300; color: var(--text-sec); line-height: 1.9; }
     .a-txt + .a-txt { margin-top: 1rem; }
+    .a-txt strong { color: var(--purple-lt); font-weight: 600; }
 
-    /* FAQ */
+    /* Eyebrow consistente com linha */
+    .about-eyebrow { display: flex; align-items: center; gap: 1rem; font-size: .67rem; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--purple-lt); margin-bottom: 1.2rem; }
+    .about-eyebrow::after { content: ''; flex: 1; height: 1px; background: var(--rule-md); }
+
+    /* FAQ — CORRIGIDO */
     .faq-wrap { border-bottom: 1px solid var(--rule); background: var(--bg); }
-    .faq { max-width: 1280px; margin: 0 auto; padding: 6rem 3rem; display: grid; grid-template-columns: 260px 1fr; gap: 6rem; }
+    .faq { max-width: 1280px; margin: 0 auto; padding: 5rem 3rem; display: grid; grid-template-columns: 260px 1fr; gap: 6rem; }
     .faq-item { border-bottom: 1px solid var(--rule); }
     .faq-btn { width: 100%; background: none; border: none; color: var(--text); font-family: var(--f-sans); font-size: .9rem; font-weight: 300; text-align: left; padding: 1.4rem 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; transition: color .2s; }
     .faq-btn:hover { color: var(--purple-lt); }
-    .faq-ico { width: 24px; height: 24px; min-width: 24px; border: 1px solid var(--rule-md); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: .9rem; color: var(--text-dim); transition: transform .35s, border-color .2s, color .2s; }
-    .faq-item.open .faq-ico { transform: rotate(45deg); border-color: var(--purple); color: var(--purple-lt); }
+    /* CORRIGIDO: ícone + do FAQ com borda roxa */
+    .faq-ico { width: 24px; height: 24px; min-width: 24px; border: 1px solid var(--purple-bd); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: .9rem; color: var(--purple-lt); background: var(--purple-bg); transition: transform .35s, border-color .2s, color .2s; }
+    .faq-item.open .faq-ico { transform: rotate(45deg); border-color: var(--purple-lt); background: rgba(124,58,237,.15); }
     .faq-ans { font-size: .87rem; font-weight: 300; color: var(--text-sec); line-height: 1.85; max-height: 0; overflow: hidden; transition: max-height .4s ease, padding .3s; }
     .faq-item.open .faq-ans { max-height: 300px; padding-bottom: 1.4rem; }
 
-    /* FOOTER */
+    /* FOOTER — CORRIGIDO: ponto roxo */
     .ft { background: #050507; border-top: 1px solid var(--rule); }
     .ft-inner { max-width: 1280px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding: 2.5rem 3rem; }
     .ft-logo { font-family: var(--f-serif); font-size: 1.05rem; font-weight: 600; color: var(--text); }
@@ -267,8 +286,8 @@
     .modal-ov { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.9); z-index: 500; align-items: center; justify-content: center; padding: 1.5rem; }
     .modal-ov.active { display: flex; }
     .modal-box { background: var(--bg-card); border: 1px solid var(--rule-md); border-radius: 12px; width: 100%; max-width: 580px; max-height: 90vh; overflow-y: auto; padding: 2.5rem; position: relative; }
-    .modal-x { position: absolute; top: 1.2rem; right: 1.2rem; background: none; border: 1px solid var(--rule-md); color: var(--text-sec); width: 30px; height: 30px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: .9rem; transition: border-color .2s, color .2s; }
-    .modal-x:hover { border-color: var(--purple-lt); color: var(--purple-lt); }
+    .modal-x { position: absolute; top: 1.2rem; right: 1.2rem; background: none; border: 1px solid var(--purple-bd); color: var(--purple-lt); width: 30px; height: 30px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: .9rem; transition: border-color .2s, color .2s; }
+    .modal-x:hover { border-color: var(--purple-lt); }
     .modal-tag { font-size: .62rem; font-weight: 500; letter-spacing: .15em; text-transform: uppercase; color: var(--purple-lt); margin-bottom: .4rem; }
     .modal-title { font-family: var(--f-serif); font-size: 1.4rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--text); }
     .modal-ph { background: var(--purple-bg); border: 1px dashed var(--purple-bd); border-radius: 8px; padding: 2rem; text-align: center; color: var(--text-sec); font-size: .82rem; line-height: 1.8; }
@@ -664,7 +683,7 @@
   <div class="about-l fade-up">
     <div class="a-photo">
       <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-      <span style="font-size:.75rem;">Substitua pela sua foto<br><code style="font-size:.62rem;opacity:.6;">&lt;img src="foto.jpg" style="width:100%;border-radius:2px;"&gt;</code></span>
+      <div class="a-photo-hint">Substitua pela sua foto<br><span style="font-size:.65rem;opacity:.5;font-family:monospace;">foto.jpg</span></div>
     </div>
     <div class="a-creds">
       <div class="a-cred"><div class="a-cdot"></div><div class="a-ctxt">Professor e Pesquisador</div><div class="a-cinst">UFG</div></div>
@@ -675,10 +694,10 @@
     </div>
   </div>
   <div class="about-r fade-up">
-    <div class="s-eye" style="margin-bottom:1.2rem;">Coordenador dos programas</div>
+    <div class="about-eyebrow">Coordenador dos programas</div>
     <h2 class="a-title">Prof.<br><em>Cleidinaldo</em></h2>
-    <p class="a-txt">Professor e pesquisador da <strong style="color:var(--onyx);font-weight:600;">Universidade Federal de Goiás (UFG)</strong>. Economista com trajetória que une formação clássica a especializações de ponta em inteligência artificial.</p>
-    <p class="a-txt" style="margin-top:1rem;">Formado pelo <strong style="color:var(--onyx);font-weight:600;">MIT</strong> em Designing and Building AI Products and Services. Coordena a Especialização em IA e Ciência de Dados na Gestão Pública na UFG.</p>
+    <p class="a-txt">Professor e pesquisador da <strong>Universidade Federal de Goiás (UFG)</strong>. Economista com trajetória que une formação clássica a especializações de ponta em inteligência artificial.</p>
+    <p class="a-txt" style="margin-top:1rem;">Formado pelo <strong>MIT</strong> em Designing and Building AI Products and Services. Coordena a Especialização em IA e Ciência de Dados na Gestão Pública na UFG.</p>
     <p class="a-txt" style="margin-top:1rem;">Atua em inteligência artificial aplicada a negócios com ênfase em estratégia, automação e decisões orientadas por dados.</p>
     <div style="margin-top:2rem;">
       <a href="https://instagram.com" target="_blank" class="btn-outline">Seguir no Instagram →</a>
