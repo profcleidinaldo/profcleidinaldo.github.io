@@ -87,11 +87,11 @@
       max-width: 1280px; margin: 0 auto;
       display: grid; grid-template-columns: 1fr 400px;
       align-items: center; gap: 4rem;
-      padding: 7rem 3rem 5rem;
+      padding: 7rem 3rem 3rem;
       position: relative; z-index: 1;
-      min-height: 100vh;
+      min-height: calc(100vh - 120px);
     }
-    .hero-eyebrow { display: inline-flex; align-items: center; gap: .7rem; font-size: .68rem; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--purple-lt); margin-bottom: 1.4rem; }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: .7rem; font-size: .68rem; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--purple-lt); margin-bottom: .8rem; }
     .hero-eyebrow::before { content: ''; width: 28px; height: 1px; background: linear-gradient(90deg, var(--purple), var(--purple-lt)); }
 
     h1.hero-title {
@@ -166,13 +166,15 @@
     .stats-wrap { border-bottom: 1px solid var(--rule); }
     .stats { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(4,1fr); border-left: 1px solid var(--rule); }
     .stat-c { padding: 2rem 2rem; border-right: 1px solid var(--rule); }
-    .stat-n { font-family: var(--f-serif); font-size: 2.8rem; font-weight: 700; color: var(--text); line-height: 1; margin-bottom: .25rem; }
+    .stat-n { font-family: var(--f-serif); font-size: 2.8rem; font-weight: 700; color: var(--text); line-height: 1; margin-bottom: .25rem; display: flex; align-items: baseline; gap: .1em; }
+    .stat-n.dezenas { font-size: 2rem; }
+    .stat-pct { font-size: 1.4rem; color: var(--purple-lt); line-height: 1; }
     .stat-n sup { font-size: 1.4rem; color: var(--purple-lt); }
     .stat-d { font-size: .72rem; color: var(--text-sec); font-weight: 400; letter-spacing: .05em; }
 
     /* ── PROGRAMS ── */
     .progs-wrap { border-bottom: 1px solid var(--rule); }
-    .progs { max-width: 1280px; margin: 0 auto; padding: 4rem 3rem; }
+    .progs { max-width: 1280px; margin: 0 auto; padding: 3.5rem 3rem; }
     .s-eye { display: flex; align-items: center; gap: 1rem; font-size: .67rem; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--purple-lt); margin-bottom: 1rem; }
     .s-eye::after { content: ''; flex: 1; height: 1px; background: var(--rule-md); }
     .s-title {
@@ -265,8 +267,8 @@
       max-width: 1280px; margin: 0 auto;
       display: grid; grid-template-columns: 320px 1fr;
     }
-    .about-l { padding: 4rem 2.5rem; border-right: 1px solid var(--rule); }
-    .about-r { padding: 4rem 3rem; max-width: 680px; }
+    .about-l { padding: 3.5rem 2.5rem; border-right: 1px solid var(--rule); }
+    .about-r { padding: 3.5rem 3rem; max-width: 680px; }
 
     .a-photo {
       aspect-ratio: 3/4; max-height: 380px;
@@ -301,7 +303,7 @@
 
     /* ── FAQ ── */
     .faq-wrap { border-bottom: 1px solid var(--rule); background: var(--bg); }
-    .faq { max-width: 1280px; margin: 0 auto; padding: 4rem 3rem; display: grid; grid-template-columns: 240px 1fr; gap: 5rem; }
+    .faq { max-width: 1280px; margin: 0 auto; padding: 3.5rem 3rem; display: grid; grid-template-columns: 240px 1fr; gap: 5rem; }
     .faq-item { border-bottom: 1px solid var(--rule); }
     .faq-btn { width: 100%; background: none; border: none; color: var(--text); font-family: var(--f-sans); font-size: .88rem; font-weight: 300; text-align: left; padding: 1.2rem 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; transition: color .2s; }
     .faq-btn:hover { color: var(--purple-lt); }
@@ -415,9 +417,9 @@
 <!-- STATS -->
 <div class="stats-wrap">
 <div class="stats">
-  <div class="stat-c fade-up"><div class="stat-n">500<sup>+</sup></div><div class="stat-d">Alunos impactados</div></div>
+  <div class="stat-c fade-up"><div class="stat-n dezenas">Dezenas</div><div class="stat-d">Alunos impactados</div></div>
   <div class="stat-c fade-up"><div class="stat-n">4</div><div class="stat-d">Programas disponíveis</div></div>
-  <div class="stat-c fade-up"><div class="stat-n">100<sup>%</sup></div><div class="stat-d">Online ao vivo</div></div>
+  <div class="stat-c fade-up"><div class="stat-n">100<span class="stat-pct">%</span></div><div class="stat-d">Online ao vivo</div></div>
   <div class="stat-c fade-up"><div class="stat-n">UFG</div><div class="stat-d">Chancela federal</div></div>
 </div>
 </div>
@@ -785,8 +787,7 @@
 <div class="ft">
 <div class="ft-inner">
   <div class="ft-logo">
-      <div class="ft-logo-name">Prof. Cleidinaldo <em>·</em></div>
-      <div class="ft-sub">Inteligência Artificial FACE | UFG</div>
+      <div class="ft-logo-name">Inteligência Artificial <em>FACE | UFG</em></div>
     </div>
   <div class="ft-copy">© 2025 · Todos os direitos reservados</div>
   <div class="ft-links">
