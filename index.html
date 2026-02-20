@@ -165,12 +165,12 @@
     /* ── STATS ── */
     .stats-wrap { border-bottom: 1px solid var(--rule); }
     .stats { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(4,1fr); border-left: 1px solid var(--rule); }
-    .stat-c { padding: 2rem 2rem; border-right: 1px solid var(--rule); }
-    .stat-n { font-family: var(--f-serif); font-size: 2.8rem; font-weight: 700; color: var(--text); line-height: 1; margin-bottom: .25rem; display: flex; align-items: baseline; gap: .1em; }
+    .stat-c { padding: 2rem 2rem; border-right: 1px solid var(--rule); text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    .stat-n { font-family: var(--f-serif); font-size: 2.8rem; font-weight: 700; color: var(--text); line-height: 1; margin-bottom: .25rem; display: flex; align-items: baseline; justify-content: center; gap: .1em; }
     .stat-n.dezenas { font-size: 2rem; }
     .stat-pct { font-size: 1.4rem; color: var(--purple-lt); line-height: 1; }
     .stat-n sup { font-size: 1.4rem; color: var(--purple-lt); }
-    .stat-d { font-size: .78rem; color: var(--text-sec); font-weight: 400; letter-spacing: .05em; }
+    .stat-d { font-size: .78rem; color: var(--text-sec); font-weight: 400; letter-spacing: .05em; text-align: center; }
 
     /* ── PROGRAMS ── */
     .progs-wrap { border-bottom: 1px solid var(--rule); }
@@ -466,7 +466,7 @@
 <!-- STATS -->
 <div class="stats-wrap">
 <div class="stats">
-  <div class="stat-c fade-up"><div class="stat-n dezenas">Dezenas</div><div class="stat-d">Alunos impactados</div></div>
+  <div class="stat-c fade-up"><div class="stat-n dezenas">Dezenas</div><div class="stat-d">Carreiras transformadas</div></div>
   <div class="stat-c fade-up"><div class="stat-n">4</div><div class="stat-d">Cursos disponíveis</div></div>
   <div class="stat-c fade-up"><div class="stat-n">100<span class="stat-pct">%</span></div><div class="stat-d">Online ao vivo</div></div>
   <div class="stat-c fade-up"><div class="stat-n">UFG</div><div class="stat-d">Chancela federal</div></div>
