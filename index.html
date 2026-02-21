@@ -341,6 +341,26 @@
     .modal-ph strong { display: block; color: var(--purple-lt); font-family: var(--f-serif); font-size: 1.1rem; margin-bottom: .5rem; }
     .modal-iframe { width: 100%; height: 480px; border: none; border-radius: 6px; }
 
+    /* ── MÓDULOS GRADE ── */
+    .p-grade-modulos { display: grid; grid-template-columns: repeat(3, 1fr); gap: .5rem; }
+    .p-modulo { border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; cursor: pointer; transition: border-color .2s; }
+    .p-modulo:hover { border-color: var(--purple-bd); }
+    .p-modulo.open { border-color: var(--purple-bd); grid-column: span 3; }
+    .p-mod-header { display: flex; align-items: center; gap: .9rem; padding: 1.1rem 1.2rem; background: var(--bg-card); min-height: 80px; }
+    .p-mod-n { font-family: var(--f-serif); font-size: .85rem; font-weight: 700; color: var(--purple-lt); min-width: 22px; flex-shrink: 0; }
+    .p-mod-title { font-size: .9rem; font-weight: 600; color: var(--text); line-height: 1.35; flex: 1; }
+    .p-mod-ico { width: 26px; height: 26px; min-width: 26px; border: 1px solid var(--purple-bd); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: .85rem; color: var(--purple-lt); background: var(--purple-bg); transition: transform .3s; flex-shrink: 0; }
+    .p-modulo.open .p-mod-ico { transform: rotate(45deg); }
+    .p-mod-discs { max-height: 0; overflow: hidden; transition: max-height .4s ease; border-top: 0px solid var(--rule); }
+    .p-modulo.open .p-mod-discs { max-height: 400px; border-top: 1px solid var(--rule); }
+    .p-disc { font-size: .88rem; font-weight: 300; color: var(--text-sec); padding: .75rem 1.2rem .75rem 2.8rem; border-bottom: 1px solid rgba(39,39,42,.5); line-height: 1.5; position: relative; }
+    .p-disc:last-child { border-bottom: none; }
+    .p-disc::before { content: '—'; color: var(--purple-lt); opacity: .5; position: absolute; left: 1.2rem; }
+    .p-modulo-final .p-mod-header { background: var(--purple-bg); }
+    .p-modulo-final .p-mod-title { color: var(--purple-lt); }
+    @media(max-width:1024px) { .p-grade-modulos { grid-template-columns: repeat(2,1fr); } .p-modulo.open { grid-column: span 2; } }
+    @media(max-width:768px) { .p-grade-modulos { grid-template-columns: 1fr; } .p-modulo.open { grid-column: span 1; } }
+
     /* ── INVESTIMENTO ── */
     .inv-card {
       background: linear-gradient(135deg, #1a0a3d 0%, #2d1065 50%, #1a0a3d 100%);
@@ -548,17 +568,76 @@
           <div class="p-lbl">Grade curricular</div>
           <h3 class="p-sh">O que você vai aprender</h3>
           <p class="p-sd">360 horas cobrindo desde fundamentos de IA até aplicações avançadas na gestão pública.</p>
-          <div class="p-grade">
-            <div class="p-gi"><span class="p-gn">01</span><span class="p-gname">Fundamentos de Inteligência Artificial</span></div>
-            <div class="p-gi"><span class="p-gn">02</span><span class="p-gname">Ciência de Dados e Estatística</span></div>
-            <div class="p-gi"><span class="p-gn">03</span><span class="p-gname">Machine Learning Aplicado</span></div>
-            <div class="p-gi"><span class="p-gn">04</span><span class="p-gname">Visualização e Análise de Dados</span></div>
-            <div class="p-gi"><span class="p-gn">05</span><span class="p-gname">IA na Gestão de Políticas Públicas</span></div>
-            <div class="p-gi"><span class="p-gn">06</span><span class="p-gname">Automação de Processos Governamentais</span></div>
-            <div class="p-gi"><span class="p-gn">07</span><span class="p-gname">Ética e Governança de IA</span></div>
-            <div class="p-gi"><span class="p-gn">08</span><span class="p-gname">Tomada de Decisão por Dados</span></div>
-            <div class="p-gi"><span class="p-gn">09</span><span class="p-gname">Transformação Digital no Setor Público</span></div>
-            <div class="p-gi"><span class="p-gn">10</span><span class="p-gname">Projeto Aplicado Final</span></div>
+          <div class="p-grade-modulos">
+            <div class="p-modulo" onclick="toggleModulo(this)">
+              <div class="p-mod-header">
+                <span class="p-mod-n">00</span>
+                <span class="p-mod-title">Boas-Vindas e Ambientação ao Curso</span>
+                <span class="p-mod-ico">+</span>
+              </div>
+              <div class="p-mod-discs">
+                <div class="p-disc">Evento Institucional: Cerimônia de Abertura e Recepção aos Discentes</div>
+                <div class="p-disc">Aula Inaugural: Apresentação do Curso e Boas-Vindas Acadêmicas</div>
+              </div>
+            </div>
+            <div class="p-modulo" onclick="toggleModulo(this)">
+              <div class="p-mod-header">
+                <span class="p-mod-n">01</span>
+                <span class="p-mod-title">Fundamentos de IA, Dados e Ética</span>
+                <span class="p-mod-ico">+</span>
+              </div>
+              <div class="p-mod-discs">
+                <div class="p-disc">Ética, Regulação e Riscos no Uso de IA na Gestão Pública</div>
+                <div class="p-disc">Machine Learning sem Mistérios: Aplicações na Gestão Pública</div>
+                <div class="p-disc">IA e Ciência de Dados na Gestão Pública: Visão Estratégica</div>
+              </div>
+            </div>
+            <div class="p-modulo" onclick="toggleModulo(this)">
+              <div class="p-mod-header">
+                <span class="p-mod-n">02</span>
+                <span class="p-mod-title">Automação e Aplicações de IA na Gestão Pública</span>
+                <span class="p-mod-ico">+</span>
+              </div>
+              <div class="p-mod-discs">
+                <div class="p-disc">Gestão de Projetos com IA: Do Problema à Solução</div>
+                <div class="p-disc">Agentes de IA e Automação na Gestão Pública</div>
+                <div class="p-disc">Modelos de Linguagem Natural e IA Generativa para a Gestão Pública</div>
+              </div>
+            </div>
+            <div class="p-modulo" onclick="toggleModulo(this)">
+              <div class="p-mod-header">
+                <span class="p-mod-n">03</span>
+                <span class="p-mod-title">Gestão, Análise e Visualização de Dados</span>
+                <span class="p-mod-ico">+</span>
+              </div>
+              <div class="p-mod-discs">
+                <div class="p-disc">Gerenciamento e Estruturação de Banco de Dados</div>
+                <div class="p-disc">Tecnologias e Aplicações de Big Data na Gestão Pública</div>
+                <div class="p-disc">Visualização de Dados para Decisão na Gestão Pública</div>
+              </div>
+            </div>
+            <div class="p-modulo" onclick="toggleModulo(this)">
+              <div class="p-mod-header">
+                <span class="p-mod-n">04</span>
+                <span class="p-mod-title">Modelagem, Estratégias e Integração em IA e Dados</span>
+                <span class="p-mod-ico">+</span>
+              </div>
+              <div class="p-mod-discs">
+                <div class="p-disc">Análise Preditiva e Mineração de Dados para a Gestão Pública</div>
+                <div class="p-disc">Analytics e Modelagem Avançada na Gestão Pública</div>
+                <div class="p-disc">Estudos de Caso e Seminários de Integração Final</div>
+              </div>
+            </div>
+            <div class="p-modulo p-modulo-final" onclick="toggleModulo(this)">
+              <div class="p-mod-header">
+                <span class="p-mod-n">✦</span>
+                <span class="p-mod-title">Projeto Integrador de Soluções com IA na Gestão Pública</span>
+                <span class="p-mod-ico">+</span>
+              </div>
+              <div class="p-mod-discs">
+                <div class="p-disc">Desenvolvimento de projeto real aplicado ao contexto do aluno, com orientação e apresentação final para banca avaliadora.</div>
+              </div>
+            </div>
           </div>
         </div>
         <!-- INVESTIMENTO -->
@@ -910,6 +989,11 @@
     const el=document.getElementById(id),isOpen=el.classList.contains('open');
     document.querySelectorAll('.pi.open').forEach(i=>i.classList.remove('open'));
     if(!isOpen){el.classList.add('open');setTimeout(()=>el.scrollIntoView({behavior:'smooth',block:'start'}),120);}
+  }
+  function toggleModulo(el) {
+    const isOpen = el.classList.contains('open');
+    document.querySelectorAll('.p-modulo.open').forEach(m => m.classList.remove('open'));
+    if (!isOpen) el.classList.add('open');
   }
   function toggleFaq(btn){
     const item=btn.closest('.faq-item'),isOpen=item.classList.contains('open');
